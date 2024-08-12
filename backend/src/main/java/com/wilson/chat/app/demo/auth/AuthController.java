@@ -1,5 +1,6 @@
 package com.wilson.chat.app.demo.auth;
 
+import com.wilson.chat.app.demo.entity.User.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

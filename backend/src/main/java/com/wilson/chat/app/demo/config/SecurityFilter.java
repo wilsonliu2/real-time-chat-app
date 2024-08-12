@@ -1,5 +1,6 @@
 package com.wilson.chat.app.demo.config;
 
+import com.wilson.chat.app.demo.entity.User.Permission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,17 +37,7 @@ public class SecurityFilter {
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 // Configure authorization rules
                 .authorizeHttpRequests( authConfig -> {
-                    authConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
-                    authConfig.requestMatchers(HttpMethod.POST, "/auth/register").permitAll();
-
-                    authConfig.requestMatchers(HttpMethod.GET, "/products").hasAuthority(Permission.USER.name());
-                    authConfig.requestMatchers(HttpMethod.POST, "/products").hasAuthority(Permission.ADMIN.name());
-                    authConfig.requestMatchers(HttpMethod.GET, "/user-details").authenticated();
-                    authConfig.requestMatchers(HttpMethod.POST, "/user-details").authenticated();
-
-                    authConfig.anyRequest().denyAll();
-
-
+                    authConfig.anyRequest().permitAll();
                 });
 
         return http.build();

@@ -1,6 +1,6 @@
 package com.wilson.chat.app.demo.repository;
 
-import com.wilson.chat.app.demo.entity.User;
+import com.wilson.chat.app.demo.entity.User.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

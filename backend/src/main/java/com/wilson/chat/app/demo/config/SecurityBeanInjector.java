@@ -1,5 +1,6 @@
 package com.wilson.chat.app.demo.config;
 
+import com.wilson.chat.app.demo.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;

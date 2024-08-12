@@ -1,5 +1,7 @@
 package com.wilson.chat.app.demo.config;
 
+import com.wilson.chat.app.demo.entity.User.User;
+import com.wilson.chat.app.demo.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

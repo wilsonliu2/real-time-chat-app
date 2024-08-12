@@ -1,5 +1,6 @@
 package com.wilson.chat.app.demo.config;
 
+import com.wilson.chat.app.demo.entity.User.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
